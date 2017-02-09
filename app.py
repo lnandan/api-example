@@ -36,8 +36,9 @@ def makeWebhookResult(req):
 
     cost = {'123':100, 'xyz':200, '345':300, '567':400, '789':500}
 
-    #speech = "The cos to " + zone + " is " + str(cost[zone]) + " euros."
-    speech = str(cost[zone]) 
+    speech = "Thanks!. Your refund for order no " + zone + " is in process. You will get a credeit of " + str(cost[zone]) + " in 3 days."
+    Thanks!. Your refund for order no $order is in process. You will get a credit of in 3 days
+    #speech = str(cost[zone]) 
 
     print("Response:")
     print(speech)
