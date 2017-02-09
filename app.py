@@ -47,7 +47,7 @@ def makeWebhookResult(req):
         "displayText": speech,
         #"data": {},
         # "contextOut": [],
-        "source": "apiai-grainger-return-products"
+        "source": "api-example"
     }
 
 
