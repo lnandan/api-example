@@ -37,7 +37,7 @@ def makeWebhookResult(req):
     cost = {'123':100, 'xyz':200, '345':300, '567':400, '789':500}
 
     #speech = "The cos to " + zone + " is " + str(cost[zone]) + " euros."
-    cost = str(cost[zone]) 
+    speech = str(cost[zone]) 
 
     print("Response:")
     print(speech)
