@@ -28,15 +28,16 @@ def webhook():
     return r
 
 def makeWebhookResult(req):
-    if req.get("result").get("action") != "shipping.cost":
+    if req.get("result").get("action") != "return-product":
         return {}
     result = req.get("result")
     parameters = result.get("parameters")
-    zone = parameters.get("shipping-zone")
+    zone = parameters.get("order")
 
-    cost = {'Europe':100, 'North America':200, 'South America':300, 'Asia':400, 'Africa':500}
+    cost = {'123':100, 'xyz':200, '345':300, '567':400, '789':500}
 
-    speech = "The cost of shipping to " + zone + " is " + str(cost[zone]) + " euros."
+    #speech = "The cos to " + zone + " is " + str(cost[zone]) + " euros."
+    cost = str(cost[zone]) 
 
     print("Response:")
     print(speech)
@@ -46,7 +47,7 @@ def makeWebhookResult(req):
         "displayText": speech,
         #"data": {},
         # "contextOut": [],
-        "source": "apiai-onlinestore-shipping"
+        "source": "apiai-grainger-return-products"
     }
 
 
